@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="logo" />
+    </header>
+
+    <main id="container">
+      <div>
+        <!-- Bill -->
+
+        <section id="bill">
+          <h1 class="title">Bill</h1>
+          <input dir="rtl" value="0" id="bill-input-field" type="number" />
+          <img
+            class="input-field-image"
+            src="images/icon-dollar.svg"
+            alt="icon-dollar"
+          />
+        </section>
+
+        <!-- Tip -->
+
+        <section id="tip">
+          <h1 class="title">Select Tip %</h1>
+          <div id="tip-flex-container">
+            <button class="tip-percentage">5%</button>
+            <button class="tip-percentage">10%</button>
+            <button class="tip-percentage">15%</button>
+            <button class="tip-percentage">25%</button>
+            <button class="tip-percentage">50%</button>
+            <input
+              dir="rtl"
+              id="custom-tip-input-field"
+              type="number"
+              placeholder="Custom"
+            />
+          </div>
+        </section>
+
+        <!-- Number of People -->
+
+        <section id="num-of-people">
+          <div id="num-of-people-title">
+            <h1 class="title">Number of People</h1>
+            <!-- <h1 id="num-of-people-error">Can't be zero</h1> -->
+          </div>
+          <input
+            dir="rtl"
+            value="0"
+            id="num-of-people-input-field"
+            type="number"
+          />
+          <img class="input-field-image" src="images/icon-person.svg" alt="" />
+        </section>
+      </div>
+
+      <!-- Calculator -->
+
+      <section id="calculator">
+        <div>
+          <div class="calculation">
+            <div class="calculation-main">
+              <h1 class="calc-title">Tip Amount</h1>
+              <h1 class="slash-person">/ person</h1>
+            </div>
+            <h1 id="tip-amount-per-person">$0.00</h1>
+          </div>
+          <div class="calculation">
+            <div class="calculation-main">
+              <h1 class="calc-title">Total</h1>
+              <h1 class="slash-person">/ person</h1>
+            </div>
+            <h1 id="total-per-person">$0.00</h1>
+          </div>
+        </div>
+
+        <button id="reset-button">Reset</button>
+      </section>
+    </main>
+  </body>
+</html>

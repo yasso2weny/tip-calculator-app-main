@@ -1,0 +1,280 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary: hsl(186, 14%, 43%);
+  --secondary: hsl(183, 100%, 15%);
+
+  --hover: hsl(172, 67%, 45%);
+
+  --p: hsl(184, 14%, 56%);
+
+  --bg-color-primary: hsl(185, 41%, 84%);
+  --bg-color-secondary: hsl(0, 0%, 100%);
+  --bg-color-three: hsl(189, 41%, 97%);
+
+  --ff-base: "Space Mono", monospace;
+
+  --fw-regular: 700;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5625rem;
+
+  border-radius: 0.9375rem 0.9375rem 0 0;
+  background-color: var(--bg-color-secondary);
+}
+
+.title {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.4375rem;
+}
+
+#bill,
+#num-of-people {
+  position: relative;
+}
+
+.input-field-image {
+  position: absolute;
+  bottom: 0.9375rem;
+  left: 0.875rem;
+}
+
+/* Bill */
+
+#bill-input-field {
+  width: 100%;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: var(--bg-color-three);
+  color: var(--secondary);
+  padding: 0.3125rem 1.25rem;
+}
+
+#bill-input-field:focus {
+  box-shadow: 0 0 0 0.125rem var(--hover);
+  outline: none;
+}
+
+/* Tip Percentage */
+
+#tip-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.625rem;
+}
+
+.tip-percentage {
+  border: none;
+
+  border-radius: 0.3125rem;
+  background-color: var(--secondary);
+  color: var(--bg-color-secondary);
+  width: 8.75rem;
+  padding: 0.25rem 0;
+}
+
+.tip-percentage:hover {
+  background-color: var(--hover);
+  color: var(--secondary);
+}
+
+#custom-tip-input-field {
+  width: 8.75rem;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: var(--bg-color-three);
+  color: var(--secondary);
+  padding: 0.25rem 0.625rem;
+}
+
+#custom-tip-input-field::placeholder {
+  color: var(--primary);
+  padding-right: 0.625rem;
+}
+
+#custom-tip-input-field:focus {
+  box-shadow: 0 0 0 0.125rem var(--hover);
+  outline: none;
+}
+
+/* Number of People */
+
+#num-of-people-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+#num-of-people-input-field {
+  width: 100%;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: var(--bg-color-three);
+  color: var(--secondary);
+  padding: 0.3125rem 1.25rem;
+}
+
+#num-of-people-input-field:focus {
+  box-shadow: 0 0 0 0.125rem var(--hover);
+  outline: none;
+}
+
+/* #num-of-people-error {
+    font-size: 1rem;
+    color: orange;
+} */
+
+/* Calculator */
+
+#calculator {
+  border-radius: 0.9375rem;
+  background-color: var(--secondary);
+  padding: 1.125rem;
+}
+
+.calculation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+
+.calc-title {
+  font-size: 0.875rem;
+  color: var(--bg-color-secondary);
+}
+
+.slash-person {
+  font-size: 0.875rem;
+  color: var(--p);
+}
+
+#tip-amount-per-person,
+#total-per-person {
+  color: var(--hover);
+}
+
+#reset-button {
+  border: none;
+  width: 100%;
+  border-radius: 0.3125rem;
+  background-color: var(--hover);
+  color: var(--secondary);
+  padding: 0.25rem 0;
+  margin-top: 0.625rem;
+}
+
+#reset-button:hover {
+  background-color: hsl(172, 61%, 66%);
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 56.875rem;
+    border-radius: 0.9375rem;
+  }
+
+  #bill,
+  #tip {
+    margin-bottom: 1.5625rem;
+  }
+
+  #tip {
+    width: 25.625rem;
+  }
+
+  .tip-percentage {
+    width: 8.125rem;
+  }
+
+  #custom-tip-input-field {
+    width: 8.125rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  #calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25.625rem;
+    padding: 1.875rem;
+  }
+
+  .calculation {
+    margin-bottom: 1.25rem;
+  }
+}
